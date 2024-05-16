@@ -1,0 +1,16 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "go build -o ./target/bin/main ./cmd/server"
+bin = "target/bin/main"
+full_bin = "APP_ENV=dev APP_USER=air ./target/bin/main"
+include_ext = ["go", "html"]
+exclude_dir = ["tmp", "vendor", "static", "bin"]
+delay = 1000 # ms
+
+[log]
+time = false
+
+[misc]
+clean_on_exit = true

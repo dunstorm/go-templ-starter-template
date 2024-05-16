@@ -1,0 +1,19 @@
+package templates
+
+templ header(title string) {
+	<head>
+		<title>{ title }</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+}
+
+templ Layout(contents templ.Component, title string) {
+	<!DOCTYPE html>
+	<html>
+		@header(title)
+		<body>
+			@contents
+		</body>
+	</html>
+}
